@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic-Based Pathfinding Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Dynamic Knowledge-Based Agent (Wumpus World)</h2>
+
+    <div class="controls">
+        <div class="input-group">
+            <label for="gridSize">Grid Size:</label>
+            <input type="number" id="gridSize" value="4" min="3" max="8">
+        </div>
+        <button onclick="initGame()" class="btn-secondary">Restart Episode</button>
+        <button onclick="nextStep()" id="stepBtn" class="btn-primary">Next Move</button>
+    </div>
+
+    <div id="grid-container">
+        <div id="grid"></div>
+    </div>
+
+    <div id="dashboard">
+        <div class="metric">
+            <h3>Current Percepts</h3>
+            <span id="perceptsDisplay">None</span>
+        </div>
+        <div class="metric">
+            <h3>Resolution Steps</h3>
+            <span id="inferenceCount">0</span>
+        </div>
+        <div class="metric full-width">
+            <h3>Agent Status</h3>
+            <span id="statusDisplay">Standing by...</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
